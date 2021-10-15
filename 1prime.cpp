@@ -37,7 +37,7 @@ void primeSeive1(int n) {
     }
     delete[] primes;
 }
-// loglogn
+// n*loglogn
 void primeSeive2(int n) {
     bool *primes = new bool[n];
     for(int i=0;i<n;i++) {

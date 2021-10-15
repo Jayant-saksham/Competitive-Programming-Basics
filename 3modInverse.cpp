@@ -27,7 +27,7 @@ int modInverse(int a, int m) {
     }
     return extendedEuclids(a, m).x;
 }
-int main(){
+int main() {
     cout<<modInverse(3,11);
     return 0;
 }

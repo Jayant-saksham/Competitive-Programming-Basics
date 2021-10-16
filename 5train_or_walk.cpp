@@ -24,7 +24,6 @@ int main() {
         else {
             t2 = INT32_MAX;
         }
-
         cout<<min(t1, t2)<<endl;
     }
     return 0;

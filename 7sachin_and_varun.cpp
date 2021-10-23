@@ -27,15 +27,34 @@ int modInverse(int a, int m) {
     }
     return extendedEuclids(a, m).x;
 }
-int findy1(int a, int b, int d) {
-    return d * modInverse(b,a);
+
+int findy1(int b, int a, int d) {
+    int modIn = modInverse(b, a);
+    int y1 = (d%a * modIn)%a;
+    return y1;
 }
-int number_of_pairs(int a, int b, int d) {
-    int y1 = findy1(a, b, d);
-    int ans = ((d/b) - y1)/a;
-    return 1+ans;
-}
-int main(){
-    cout<<number_of_pairs(2,3,5);
+int main() {
+    int a,b,d;
+    cin>>a>>b>>d;
+    if(d == 0) {
+        cout<<1<<endl;
+    }
+    int g = __gcd(a, b);
+    if(d%g == 1) {
+        cout<<0<<endl;
+    }
+    else {
+        a/=g;
+        b/=g;
+        d/=g;
+        int y1 = findy1(b, a, d);
+        if(d>y1*a) {
+            int n = ((d/b - y1)/a);
+            cout<<1+n<<endl;
+        }
+        else {
+            cout<<0<<endl;
+        }
+    }
     return 0;
 }

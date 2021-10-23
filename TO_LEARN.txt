@@ -1,0 +1,20 @@
+NUMBER THEORY 
+
+1. modInverse(a,m) => a me kya multiply kare then mod kare m ke sath ki ans = 1 aaye 
+modInverse(a, m) => (a*?)%m = 1
+
+2. gcd(a, b) = gcd(b, a%b) (if a>b)
+
+3. If ax + by = gcd(a,b)
+x = y1 
+y = x1 - (a/b)*y1
+
+
+4. ax + by = d 
+then number of pairs = 1+n 
+n = ((d/b) - y1 / a) 
+y1 = (d/b)%a = d*modInverse(b,a) = (d%a * modInverse(b,a))%a
+
+
+
+

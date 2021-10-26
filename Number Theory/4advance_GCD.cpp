@@ -16,7 +16,7 @@ int advance_GCD(int a, string s) {
     }
     return ans;
 }
-int main(){
+int main() {
     
     return 0;
 }

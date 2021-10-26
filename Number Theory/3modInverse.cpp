@@ -25,7 +25,8 @@ int modInverse(int a, int m) {
     if(__gcd(a,m)!=1) {
         return -1;
     }
-    return extendedEuclids(a, m).x;
+    int ans =  extendedEuclids(a, m).x;
+    return (ans%m + m)%m;
 }
 int main() {
     cout<<modInverse(3,11);

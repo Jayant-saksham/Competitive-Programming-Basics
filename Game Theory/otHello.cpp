@@ -2,7 +2,6 @@
 using namespace std;
 int **make_move(int **board, int x, int y, int player, int ischeck) {
     int **new_board;
-
     if (ischeck) {
         new_board = board;
     }

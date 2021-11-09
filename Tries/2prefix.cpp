@@ -30,6 +30,7 @@ void insert(struct node *root, string word) {
     }
     current->isEnd = true;
 }
+
 int prefix_count(struct node *root, string prefix) {
     struct node *current = root;
     for(int i=0;i<prefix.length();i++) {
@@ -41,6 +42,7 @@ int prefix_count(struct node *root, string prefix) {
     }
     return current->word;
 }
+
 int main() {
     string s[] = {"ram", "ramlal", "ramdev", "ramdas"};
     int n = sizeof(s)/sizeof(s[0]);

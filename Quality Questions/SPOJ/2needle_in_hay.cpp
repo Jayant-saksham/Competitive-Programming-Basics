@@ -50,16 +50,21 @@ vector<int> KMP(string s, string pattern, int PIE[]) {
     return v;
 }
 int main() {
-    string s;
-    cin>>s;
-    string pattern;
-    cin>>pattern;
-    int m = pattern.size();
-    int PIE[m];
-    pie_table(PIE, m, pattern);
-    vector<int> v = KMP(s, pattern, PIE);
-    for(int i : v) {
-        cout<<i<<" ";
+    int t;
+    cin>>t;
+    while(t--) {
+        int n;
+        cin>>n;
+        string pattern;
+        cin>>pattern;
+        string s;
+        cin>>s;
+        int PIE[n];
+        pie_table(PIE, n, pattern);
+        vector<int> v = KMP(s, pattern, PIE);
+        for(int i : v) {
+            cout<<i<<" ";
+        }
     }
     return 0;
 }

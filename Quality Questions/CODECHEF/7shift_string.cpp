@@ -25,6 +25,9 @@ void pie_table(int *PIE, int n, string pattern) {
 }
 
 int main() {
+    // formality
+    int x;
+    cin>>x;
     string a;
     cin>>a;
     string b;
